@@ -1,0 +1,840 @@
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: black;
+    color: #fff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header a {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 60px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+
+nav {
+    max-width: 1200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a:hover {
+    transition: all 0.3s ease-in-out;
+    color: #EAC581;
+}
+
+nav a:active {
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+    color: #EAC581;
+}
+
+main {
+    margin: auto;
+}
+
+section.card-home {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 16px;
+    gap: 16px;
+    justify-content: center;
+    border-style: solid;
+    border-color: #EAC581;
+    margin-top: 16px;
+    
+}
+
+section.card-home div {
+    background-color: #0e0e0e;
+    padding: 16px;
+}
+
+section.card-home div:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(238, 23, 144, 0.6);
+}
+
+section.card-home img {
+    height: 330px;
+    width:100%;
+    object-fit: cover;
+    resize: both;
+}
+
+section.card-home a img:hover {
+    scale: 1.03;
+    overflow: hidden;
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
+}
+
+section.card-home a:link {
+    text-decoration: none;
+}
+
+section.card-home a:visited {
+    text-decoration: none;
+}
+
+section.card-home a:active {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 25px;
+    transition: all 0.2s ease-in-out;
+}
+
+p {
+    text-align: left;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
+}
+
+p a:active {
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+    color: #fff;
+}
+
+footer hr {
+    margin-top: 16px;
+}
+
+footer p {
+    font-family: 'Javanese Text';
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+}
+
+/*CSS Ritratti d'artista*/
+
+section.artist-card ul {
+    max-width: 800px;
+    margin: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    padding: 16px;
+    gap: 16px;
+    border-style: solid;
+    border-color: #EAC581;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.artist-card div {
+    background-color: #0e0e0e;
+    padding: 16px;
+}
+
+section.artist-card img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+    resize: both;
+}
+
+.artist-card a {
+    position: relative;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+}
+
+.artist-card a:hover:before {
+    transition: all 0.5s ease-in-out;
+    content: "";
+    background-color: rgba(238, 23, 144, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.artist-card a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.artist-card a:hover span {
+    display: block;
+}
+
+/*MODALE Ritratti d'artista*/
+
+.modal-content {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content:target {
+    display: block;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-content .close {
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 56px;
+    font-weight: normal;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.modal-content .text {
+    padding: 32px;
+}
+
+.text h2 {
+    max-width: 750px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.text p {
+    max-width: 750px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+/*CSS Scatti da EC11 - Progetto Eden - Tra sogno e realtà - Contaminazioni disneyane - Video*/
+
+section.categoria h1 {
+    max-width: 100%;
+    font-weight: bold;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+
+}
+
+section.categoria p {
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 32px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.1;
+}
+
+section.card ul, section.card-disney ul {
+    max-width: 80%;
+    margin: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding: 16px;
+    gap: 16px;
+    border-style: solid;
+    border-color: #EAC581;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+section.card div, section.card-disney div {
+    background-color: #0e0e0e;
+    padding: 16px;
+}
+
+section.card img, section.card-disney img {
+    height: 380px;
+    object-fit: cover;
+    width: 100%;
+    resize: both;
+}
+
+section.card div:hover, section.card-disney div:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(238, 23, 144, 0.6);
+}
+
+section.card a img:hover, section.card-disney a img:hover {
+    scale: 1.03;
+    overflow: hidden;
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
+}
+
+section.approfondimenti {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+section.approfondimenti a {
+    text-decoration: none;
+}
+
+section.approfondimenti a :hover {
+    color: #EAC581;
+    text-decoration: underline;
+    scale: 1.1;
+    transition: all 0.3s ease-in-out;
+}
+
+section.approfondimenti a:active {
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+    color: #EAC581;
+}
+
+section.approfondimenti h3 {
+    font-size: 24px;
+    font: weight 600px;
+    color: #fff;
+}
+
+section.video {
+    max-width: 60%;
+    margin: auto;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr;   
+}
+
+section.video div {
+    background-color: #0e0e0e;
+    padding: 16px;
+    border-style: solid;
+    border-color: #EAC581;
+    margin-top: 16px;
+}
+
+section.video iframe {
+    height: 315px;
+    width: 100%;
+}
+
+section.video h2 {
+    text-transform: uppercase;
+}
+
+section.video p {
+    max-width: max-content;
+    margin-bottom: 16px;
+}
+
+    /* MODALE */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal:target {
+    display: block;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 220px;
+    font-size: 56px;
+    font-weight: regular;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+/*CSS Contatti*/
+
+section.contatti {
+    margin-top: 32px;
+}
+
+section.contatti h1 {
+    max-width: 100%;
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+section.testo-contatti p {
+    max-width: 50%;
+    margin: auto;
+    margin-bottom: 32px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.1;
+}
+
+section.social .icons {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 32px;
+}
+
+section.social .icons img {
+    max-width: auto;
+}
+
+.maps {
+    text-align: center;
+    height: 100%;
+}
+
+.final a {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+/*Responsive*/
+
+@media (max-width: 800px) {
+    nav {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    nav a {
+        font-size: 100%;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    nav a:hover {
+        transition: none;
+        color: #fff;
+    }
+
+    nav a:active {
+        color: #EAC581;
+    }
+
+    footer {
+        max-width: 100%;
+        height: 80%;
+    }
+
+    footer hr {
+        margin-top: 8px;
+    }
+
+    footer p {
+        font-size: 80%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    nav ul {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 80%;
+        justify-content: space-between;
+    }
+
+    footer p {
+        font-size: 60%;
+        justify-content: space-around;
+     }
+}
+
+/*Responsive index*/
+
+@media (max-width: 800px) {
+    section.card-home {
+        grid-template-columns: repeat(2, 49%);
+        margin: auto;
+        gap: 16px;
+        padding: 8px;
+        max-width: 80%; 
+    }
+
+    section.card-home div {
+        background-color: #1e1e1e;
+    }
+
+    section.card-home div:hover {
+        background: none;
+    }
+
+    section.card-home img {
+        height: 330px/2;
+        width: 100%;
+        display: flex;
+        object-fit: cover;
+        object-position: center;
+        resize: both;
+    }
+
+    section.card-home a img:hover {
+        scale: none;
+        opacity: 100%;
+    }
+
+    section.card-home a img:active {
+        transition: all 0.1s ease-in-out;
+        opacity: 60%;
+    }
+
+   h1, p {
+        font-size: 100%;
+    }
+
+    h1 a:hover {
+        color: #fff;
+        transition: none;
+        font-size: 100%;
+    }
+
+    h1 a:active {
+        transition: all 0.1s ease-in-out;
+        opacity: 60%;
+    }
+
+    p a:hover {
+        color:#fff;
+        transition: none;
+    }
+
+    p a:active {
+        transition: all 0.1s ease-in-out;
+        opacity: 60%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    section.card-home {
+        grid-template-columns: 1fr;
+        margin: auto;
+        resize: horizontal;
+    }
+
+    h1 {
+        line-height: 24px;
+    }
+
+    p {
+        line-height: 18px;
+    }
+}
+
+/*Responsive Ritratti d'artista*/
+
+@media (max-width: 800px) {
+
+section.artist-card ul {
+    max-width: 80%;
+    padding: 8px;
+    gap: 8px;
+}
+
+.artist-card div {
+    background-color: #1e1e1e;
+    padding: 8px;
+}
+
+section.artist-card img {
+    object-fit: cover;
+}
+
+.artist-card a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.artist-card a span {
+    position: relative;
+    display: block;
+    margin-top: 18px;
+}
+
+.artist-card a:hover:before {
+    background: none;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+section.artist-card ul {
+    grid-template-columns: 1fr;
+}
+
+}
+
+/*Modale artisti responsive*/
+
+@media (min-width: 320px) and (max-width:1024px) {
+    .modal-content {
+        display: grid;
+        grid-column: unset;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .modal-content .text {
+        padding: 16px;
+    }
+
+    .modal-content .text h2 {
+        max-width: 100%;
+        font-size: 100%;
+    }
+    
+    .text p {
+        max-width: 100%;
+        font-size: 100%;
+    }
+
+}
+
+/*Responsive: Scatti da EC11 - Progetto Eden - Tra sogno e realtà - Contaminazioni disneyane - Video*/
+@media (max-width: 800px) {
+section.categoria h1 {
+    font-size: 40px;
+    margin-bottom: 24px;
+    }
+
+section.categoria p {
+    margin-bottom: auto;
+    font-size: 100%;
+    }
+
+section.card ul {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8px;
+    }
+
+section.card-disney ul {
+    grid-template-columns: 1fr;
+    }
+
+section.card div, section.card-disney div {
+    background-color: #1e1e1e;
+    }
+
+section.card div:hover,  section.card-disney div:hover{
+    background: none;
+    }
+
+section.card img, section.card-disney img {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    resize: both;
+    }
+
+section.card a img:hover, section.card-disney a img:hover {
+    scale: none;
+    opacity: 100%;
+    }
+
+section.card a img:active, section.card-disney a img:active {
+    transition: all 0.1s ease-in-out;
+    opacity: 60%;
+    }
+
+section.approfondimenti {
+    gap: 48px;
+    }
+
+section.approfondimenti h3 {
+    font-size: 100%;
+    margin-top:auto;
+    }
+
+section.approfondimenti a h3:hover {
+    color: #fff;
+    scale: none;
+    text-decoration: none;
+    }
+
+section.approfondimenti a h3:active {
+    transition: none;
+    color: #EAC581;
+    }
+
+section.video {
+    max-width: 80%;
+    max-height: 60%;
+}
+
+section.video div {
+    background-color: #1e1e1e;
+}
+
+section.video iframe {
+    max-width: 100%;
+}
+section.video p {
+    font-size: 20px;
+    margin: auto;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    section.categoria h1 {
+        font-size: 32px;
+    }
+
+    section.categoria p {
+        max-width: 80%;
+    }
+
+    section.card ul {
+        grid-template-columns: 1fr;
+    }
+
+    section.approfondimenti h3 {
+        font-size: 100%;
+    }
+
+    section.video {
+    max-width: 90%;
+    }
+
+    section.video iframe {
+        min-height: 30%;
+    }
+
+    section.video p {
+        font-size: 16px;
+    }
+}
+
+/*Responsive contatti*/
+
+@media (max-width: 800px) {
+    section.social .icons {
+        margin-top: 24px;
+    }
+    .maps div, iframe {
+        margin-top: 16px;
+        width: auto;
+        height: 400px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    section.testo-contatti p {
+        max-width: 80%;
+        margin: auto;
+        font-size: 16px;
+    }
+    .maps div, iframe {
+        margin-top: 16px;
+        width: auto;
+        height: 300px;
+    }
+}
