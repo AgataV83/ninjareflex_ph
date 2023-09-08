@@ -62,6 +62,10 @@ main {
     margin: auto;
 }
 
+section.hero img {
+    width: 100%;
+}
+
 section.card-home {
     background-color: black;
     display: grid;
@@ -548,10 +552,17 @@ section.social .icons img {
 
 /*Responsive index*/
 
+@media (max-width: 1240px) {
+    section.hero img {
+        width: 100%;
+    }
+}
+
 @media (max-width: 800px) {
     section.card-home {
         grid-template-columns: repeat(2, 49%);
         margin: auto;
+        margin-top: 8px;
         gap: 16px;
         padding: 8px;
         max-width: 80%; 
@@ -614,6 +625,7 @@ section.social .icons img {
     section.card-home {
         grid-template-columns: 1fr;
         margin: auto;
+        margin-top: 8px;
         resize: horizontal;
     }
 
