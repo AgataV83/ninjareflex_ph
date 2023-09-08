@@ -1,5 +1,6 @@
 body {
     font-family: 'League Spartan', sans-serif;
+    font-family: 'Javanese Text';
     background-color: black;
     color: #fff;
     max-width: 1200px;
@@ -25,6 +26,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
     gap: 60px;
 }
 
@@ -33,18 +35,15 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 24px;
-
+    font-size: 20px;
 }
 
 nav {
     max-width: 1200px;
-    height: 50px;
+    height: 36px;
     margin: auto;
     margin-top: 8px;
-    display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 nav a:hover {
@@ -116,6 +115,7 @@ section.card-home a:active {
 }
 
 h1 {
+    font-family: 'League Spartan';
     text-align: center;
     font-weight: bold;
     font-size: 24px;
@@ -135,6 +135,7 @@ h1 a:hover {
 
 p {
     text-align: left;
+    line-height: 1.6rem;
     font-weight: normal;
     font-size: 20px;
 }
@@ -299,12 +300,12 @@ section.categoria h1 {
 }
 
 section.categoria p {
-    max-width: 50%;
+    max-width: 80%;
     margin: auto;
-    margin-bottom: 32px;
+    margin-bottom: 2.0rem;
     font-weight: normal;
     font-size: 20px;
-    line-height: 1.1;
+    line-height: 2.0;
 }
 
 section.card ul, section.card-disney ul {
@@ -540,7 +541,7 @@ section.social .icons img {
     }
 
     nav a {
-        font-size: 80%;
+        font-size: 70%;
         justify-content: space-between;
     }
 
