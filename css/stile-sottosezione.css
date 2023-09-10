@@ -76,6 +76,7 @@ section h1 {
 }
     
 section h2 {
+    font-family: 'League Spartan';
     font-size: 32px;
     color: #fff;
     text-align: center;
@@ -91,6 +92,11 @@ main {
 
 .testo {
     width: 50%;
+}
+
+.testo h3 {
+    margin-top: 2.6rem;
+    font-family: 'League Spartan';
 }
 
 .testo p {
@@ -121,7 +127,6 @@ h3 {
 .links a {
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
 }
 
 .links a:hover {
@@ -138,6 +143,8 @@ h3 {
 }
 
 .links p {
+    font-family: 'League Spartan';
+    font-weight: 600;
     font-size: 24px;
 }
 
