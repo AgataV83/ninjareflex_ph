@@ -180,6 +180,7 @@ footer p {
     text-align: center;
     font-size: 16px;
     margin: auto;
+    margin-bottom: 1.0rem;
 }
 
 /*Responsive*/
@@ -249,6 +250,7 @@ footer p {
 
     footer p {
         font-size: 80%;
+        margin-bottom: 0.8em;
     }
 
     .links a:hover {
