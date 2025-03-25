@@ -879,6 +879,11 @@ section.video p {
         width: auto;
         height: 400px;
     }
+    #rectangle {
+        margin-top: 16px;
+        width: auto;
+        height: 400px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -888,6 +893,11 @@ section.video p {
         font-size: 16px;
     }
     .maps div, iframe {
+        margin-top: 16px;
+        width: auto;
+        height: 300px;
+    }
+    #rectangle div {
         margin-top: 16px;
         width: auto;
         height: 300px;
